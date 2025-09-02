@@ -13,7 +13,6 @@ opt.signcolumn = "yes"
 vim.api.nvim_create_autocmd("User", {
   pattern = "VeryLazy",
   callback = function()
-    vim.cmd.colorscheme(theme)  -- ☑️ можно заменить на tokyonight, nord, catppuccin
-  end,
+    vim.cmd.colorscheme(theme)  end,
 })
 
