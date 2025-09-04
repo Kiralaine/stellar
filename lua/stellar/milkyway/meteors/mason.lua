@@ -1,4 +1,13 @@
-return   {
-    "williamboman/mason.nvim",
-    config = true,
-  }
+return {
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require("lspconfig")
+      lspconfig.clangd.setup({
+        cmd = { "clangd" }, 
+        filetypes = { "c", "cpp" },
+      })
+    end,
+  },
+}
+
